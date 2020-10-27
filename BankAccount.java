@@ -37,5 +37,13 @@ public class BankAccount {
         return deposited;
     }
 
+    public boolean withdraw(double amount) {
+        boolean withdrew = false;
+        if (amount > 0 && balance >= amount) {
+            balance -= amount;
+            withdrew = true;
+        }
+        return withdrew;
+    }
     
 }
