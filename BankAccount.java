@@ -24,6 +24,10 @@ public class BankAccount {
         return str;
     }
 
+    public boolean isPassword(String testPass) {
+        return testPass.equals(password);
+    }
+    
     public void setPassword(String newPass) {
         password = newPass;
     }

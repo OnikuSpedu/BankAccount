@@ -8,8 +8,10 @@ public class Driver {
         System.out.println(account.getBalance());
         System.out.println("toString - Account Info");
         System.out.println(account.toString());
-        System.out.println("Reset Password");
+        System.out.println("Password Changed");
         account.setPassword("still a bad password");
+        System.out.println("Verify Password Changed");
+        System.out.println(account.isPassword("still a bad password"));
         System.out.println("Attempt to withdraw 10 with a balance of 0");
         System.out.println(account.withdraw(10));
         System.out.println("toString - Account Info");
