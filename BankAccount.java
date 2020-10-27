@@ -28,5 +28,14 @@ public class BankAccount {
         password = newPass;
     }
 
+    public boolean deposit(double amount) {
+        boolean deposited = false;
+        if (amount > 0) {
+            balance += amount;
+            deposited = true;
+        }
+        return deposited;
+    }
+
     
 }
