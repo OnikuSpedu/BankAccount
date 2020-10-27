@@ -10,5 +10,9 @@ public class BankAccount {
         password = pw;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+
     
 }
