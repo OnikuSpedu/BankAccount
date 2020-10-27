@@ -24,5 +24,9 @@ public class BankAccount {
         return str;
     }
 
+    public void setPassword(String newPass) {
+        password = newPass;
+    }
+
     
 }
