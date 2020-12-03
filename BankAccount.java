@@ -51,29 +51,13 @@ public class BankAccount {
     }
 
     public boolean transferTo(BankAccount other, double amount, String password) {
-        System.out.println("Attempt to move $"+amount+" from the " + getAccountID() + " to " + other.getAccountID());
         if (authenticate(password)) {
-            System.out.println("Authentication Success");
             if(withdraw(amount)){
                 if(other.deposit(amount)){
-                    System.out.println(this);
-                    System.out.println(other);
-                    System.out.println();
                     return true;
-                }else{
-                    //This should never happen.
-                    //Error message provided to make sure that is the case
-                    System.out.println("CRITICAL ERROR! $"+amount + 
-                                        " withdrawn from Account #" +  this.getAccountID() + 
-                                        "Failed to add to Account #"+ other.getAccountID());
                 }
             } 
-            else{
-            System.out.println("Transfer Failed");
-            }
-        } else {
-            System.out.println("Authentication Failed");
-        }
+        } 
             
         return false;
     }
